@@ -1,3 +1,4 @@
+ HEAD
 <h2> FAQ Chatbot using NLP </h2> <br>
 I put this project together to solve a common problem: making a chatbot that actually understands what a person is asking without needing a massive, complex AI model. This was built as part of my Task 2 (referencing image_b21262.png) using Antigravity IDE.
 
@@ -25,3 +26,98 @@ Install the libraries: pip install scikit-learn nltk
 Just run python main.py and start chatting. You can type quit whenever you're done.
 
 Feedbacks are welcome!
+
+# LinguaShift — Language Translation Tool
+
+AI-powered language translator built with vanilla HTML, CSS, and JavaScript.
+Uses the Claude AI API (claude-sonnet-4-20250514) for translations.
+
+---
+
+## 📁 Project Structure
+
+```
+lingua-shift/
+├── index.html        ← Main page
+├── css/
+│   └── style.css     ← All styles
+├── js/
+│   └── app.js        ← All logic + API call
+└── README.md         ← This file
+```
+
+---
+
+## 🚀 Setup (3 steps)
+
+### Step 1 — Get your Anthropic API Key
+1. Go to https://console.anthropic.com/
+2. Sign up / log in
+3. Click **API Keys** → **Create Key**
+4. Copy the key (starts with `sk-ant-...`)
+
+### Step 2 — Add your API key
+Open `js/app.js` in any text editor and replace line 12:
+
+```js
+// BEFORE:
+const ANTHROPIC_API_KEY = "YOUR_ANTHROPIC_API_KEY_HERE";
+
+// AFTER (example):
+const ANTHROPIC_API_KEY = "sk-ant-api03-xxxxxxxxxxxxxxxx";
+```
+
+### Step 3 — Open in browser
+Just double-click `index.html` — no server needed!
+
+---
+
+## ✨ Features
+
+| Feature | Details |
+|---|---|
+| 35+ Languages | Including Hindi, Marathi, Tamil, Telugu, Urdu & more |
+| Auto-detect | Detects source language automatically |
+| Swap | Swaps languages and text with one click |
+| Copy | Copies translation to clipboard |
+| Text-to-Speech | Speaks source or translated text aloud |
+| Keyboard shortcut | Ctrl+Enter to translate |
+| Clear | Clears all fields at once |
+
+---
+
+## ⚠️ Security Note
+
+Your API key is in the JavaScript file, which is visible in the browser.
+This is **fine for personal / local use**.
+
+For a **public website**, move the API call to a backend (Node.js, Python, etc.)
+so the key is never exposed to users.
+
+---
+
+## 💡 Troubleshooting
+
+| Problem | Fix |
+|---|---|
+| "API key not set" | Set your key in `js/app.js` (Step 2 above) |
+| Blank translation | Check browser console (F12) for errors |
+| CORS error | Use a local server: `npx serve .` or Python's `python -m http.server` |
+| TTS not working | Use Chrome or Edge; Safari has limited TTS support |
+
+---
+
+## 🛠 Running with a local server (optional)
+
+If you hit CORS issues opening the file directly, run a tiny local server:
+
+```bash
+# Option A — Node.js
+npx serve .
+
+# Option B — Python 3
+python -m http.server 8080
+
+# Then open: http://localhost:8080
+```
+ 0377472 (Initial commit - LinguaShift translation app)
