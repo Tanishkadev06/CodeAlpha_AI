@@ -1,0 +1,28 @@
+{
+    "faqs": [
+        {
+            "question": "What is this chatbot for?",
+            "answer": "This is a retrieval-based FAQ chatbot designed to answer common questions using NLP similarity techniques."
+        },
+        {
+            "question": "How do I install the requirements?",
+            "answer": "You can install the necessary libraries by running 'pip install nltk scikit-learn' in your terminal."
+        },
+        {
+            "question": "What NLP techniques are being used?",
+            "answer": "The bot uses TF-IDF vectorization and Cosine Similarity to match user queries to the most relevant stored questions."
+        },
+        {
+            "question": "How do I add more questions?",
+            "answer": "Simply add a new comma-separated object to the 'faqs' list in this JSON file and restart the program."
+        },
+        {
+            "question": "Does it support multiple languages?",
+            "answer": "Currently, this basic implementation is optimized for English, but it can be adapted using different NLP models like SpaCy."
+        },
+        {
+            "question": "How do I exit the chat?",
+            "answer": "You can exit the conversation at any time by typing 'quit' in the input prompt."
+        }
+    ]
+}
