@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinguaShift — Language Translator</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <header>
+    <div class="logo">LinguaShift</div>
+    <div class="tagline">AI-powered language translation · 35+ languages</div>
+  </header>
+
+  <!-- Card -->
+  <div class="card">
+
+    <!-- Language Selectors -->
+    <div class="lang-row">
+      <div class="lang-group">
+        <label for="source-lang">Source Language</label>
+        <select id="source-lang">
+          <option value="auto">🔍 Auto Detect</option>
+          <option value="English">English</option>
+          <option value="Spanish">Spanish</option>
+          <option value="French">French</option>
+          <option value="German">German</option>
+          <option value="Italian">Italian</option>
+          <option value="Portuguese">Portuguese</option>
+          <option value="Russian">Russian</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Chinese">Chinese (Simplified)</option>
+          <option value="Korean">Korean</option>
+          <option value="Arabic">Arabic</option>
+          <option value="Hindi">Hindi</option>
+          <option value="Bengali">Bengali</option>
+          <option value="Marathi">Marathi</option>
+          <option value="Telugu">Telugu</option>
+          <option value="Tamil">Tamil</option>
+          <option value="Urdu">Urdu</option>
+          <option value="Dutch">Dutch</option>
+          <option value="Polish">Polish</option>
+          <option value="Swedish">Swedish</option>
+          <option value="Norwegian">Norwegian</option>
+          <option value="Danish">Danish</option>
+          <option value="Finnish">Finnish</option>
+          <option value="Greek">Greek</option>
+          <option value="Turkish">Turkish</option>
+          <option value="Hebrew">Hebrew</option>
+          <option value="Thai">Thai</option>
+          <option value="Vietnamese">Vietnamese</option>
+          <option value="Indonesian">Indonesian</option>
+          <option value="Malay">Malay</option>
+          <option value="Swahili">Swahili</option>
+          <option value="Ukrainian">Ukrainian</option>
+          <option value="Czech">Czech</option>
+          <option value="Hungarian">Hungarian</option>
+          <option value="Romanian">Romanian</option>
+        </select>
+      </div>
+
+      <button class="swap-btn" id="swap-btn" title="Swap languages">⇄</button>
+
+      <div class="lang-group">
+        <label for="target-lang">Target Language</label>
+        <select id="target-lang">
+          <option value="Spanish">Spanish</option>
+          <option value="English">English</option>
+          <option value="French">French</option>
+          <option value="German">German</option>
+          <option value="Italian">Italian</option>
+          <option value="Portuguese">Portuguese</option>
+          <option value="Russian">Russian</option>
+          <option value="Japanese">Japanese</option>
+          <option value="Chinese">Chinese (Simplified)</option>
+          <option value="Korean">Korean</option>
+          <option value="Arabic">Arabic</option>
+          <option value="Hindi">Hindi</option>
+          <option value="Bengali">Bengali</option>
+          <option value="Marathi">Marathi</option>
+          <option value="Telugu">Telugu</option>
+          <option value="Tamil">Tamil</option>
+          <option value="Urdu">Urdu</option>
+          <option value="Dutch">Dutch</option>
+          <option value="Polish">Polish</option>
+          <option value="Swedish">Swedish</option>
+          <option value="Norwegian">Norwegian</option>
+          <option value="Danish">Danish</option>
+          <option value="Finnish">Finnish</option>
+          <option value="Greek">Greek</option>
+          <option value="Turkish">Turkish</option>
+          <option value="Hebrew">Hebrew</option>
+          <option value="Thai">Thai</option>
+          <option value="Vietnamese">Vietnamese</option>
+          <option value="Indonesian">Indonesian</option>
+          <option value="Malay">Malay</option>
+          <option value="Swahili">Swahili</option>
+          <option value="Ukrainian">Ukrainian</option>
+          <option value="Czech">Czech</option>
+          <option value="Hungarian">Hungarian</option>
+          <option value="Romanian">Romanian</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Text Areas -->
+    <div class="textareas">
+      <div class="textarea-wrap">
+        <div class="textarea-label">
+          <span>Input Text</span>
+          <span class="char-count" id="char-count">0 / 2000</span>
+        </div>
+        <textarea id="source-text" placeholder="Type or paste text here… (Ctrl+Enter to translate)" maxlength="2000"></textarea>
+      </div>
+
+      <div class="textarea-wrap">
+        <div class="textarea-label">
+          <span>Translation</span>
+          <span class="detecting" id="detecting-label"></span>
+        </div>
+        <textarea id="target-text" placeholder="Translation will appear here…" readonly></textarea>
+      </div>
+    </div>
+
+    <!-- Translate Button -->
+    <button class="translate-btn" id="translate-btn">
+      <span class="spinner" id="spinner"></span>
+      <span class="btn-text" id="btn-text">✦ Translate</span>
+    </button>
+
+    <!-- Action Buttons -->
+    <div class="actions">
+      <button class="action-btn" id="copy-btn">📋 Copy Translation</button>
+      <button class="action-btn" id="speak-source-btn">🔊 Speak Source</button>
+      <button class="action-btn" id="speak-target-btn">🔊 Speak Translation</button>
+      <button class="action-btn" id="clear-btn">✕ Clear All</button>
+    </div>
+
+    <!-- Status Message -->
+    <div class="status" id="status"></div>
+
+  </div><!-- /.card -->
+
+  <div class="note">
+    Powered by Google Gemini (gemini-1.5-flash) &nbsp;·&nbsp; 100% Free &nbsp;·&nbsp; Open <code>js/app.js</code> and set your <code>GEMINI_API_KEY</code>
+  </div>
+
+</div><!-- /.container -->
+
+<script src="js/app.js"></script>
+</body>
+</html>
