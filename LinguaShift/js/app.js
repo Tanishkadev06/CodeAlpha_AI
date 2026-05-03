@@ -11,7 +11,7 @@
  * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  */
 
-const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY_HERE";   // ← paste your key here
+const GEMINI_API_KEY = "AIzaSyDsPiv10vBfU3rmJT5CghqjLSKxv9iysq4";   // ← paste your key here
 const GEMINI_MODEL   = "gemini-1.5-flash";
 const API_URL        = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
 
